@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santa Temporada | Dicas, Experiências, Passeios e Pousadas em Santa Catarina</title>
-    <meta name="description" content="Descubra o melhor de Santa Catarina: restaurantes praianos, passeios turísticos e pousadas em Balneário Camboriú, Florianópolis, Garopaba e Bombinhas com resgate exclusivo via WhatsApp.">
-    <meta name="keywords" content="Santa Temporada, turismo Santa Catarina, ofertas Florianopolis, passeios Balneario Camboriu, pousadas Garopaba, restaurantes Floripa">
-    
+    <meta name="description"
+        content="Descubra o melhor de Santa Catarina: restaurantes praianos, passeios turísticos e pousadas em Balneário Camboriú, Florianópolis, Garopaba e Bombinhas com resgate exclusivo via WhatsApp.">
+    <meta name="keywords"
+        content="Santa Temporada, turismo Santa Catarina, ofertas Florianopolis, passeios Balneario Camboriu, pousadas Garopaba, restaurantes Floripa">
+
     <!-- Open Graph / Meta Social -->
     <meta property="og:title" content="Santa Temporada | Clube de Experiências em Santa Catarina">
-    <meta property="og:description" content="Acesse experiências exclusivas, passeios e gastronomia em SC sem intermediários. Resgate direto pelo WhatsApp!">
+    <meta property="og:description"
+        content="Acesse experiências exclusivas, passeios e gastronomia em SC sem intermediários. Resgate direto pelo WhatsApp!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.santatemporada.com.br">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <!-- Header / Navbar -->
@@ -34,7 +41,7 @@
                 <div><span class="logo-accent">Santa</span>Temporada</div>
                 <span class="badge-vip">SC VIP</span>
             </a>
-            
+
             <!-- Mobile Menu Toggle Button -->
             <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Abrir Menu de Navegação">
                 <i class="fa-solid fa-bars icon-open"></i>
@@ -55,7 +62,8 @@
                 </div>
 
                 <div class="nav-actions">
-                    <a href="https://whatsapp.com/channel/0029Vb8s3tz6GcGL6bBy2w45" target="_blank" class="btn btn-whatsapp-header">
+                    <a href="https://whatsapp.com/channel/0029Vb8s3tz6GcGL6bBy2w45" target="_blank"
+                        class="btn btn-whatsapp-header">
                         <i class="fa-brands fa-whatsapp"></i>
                         <span>Canal VIP no WA</span>
                     </a>
@@ -68,20 +76,22 @@
     <section class="hero-section">
         <div class="container hero-container">
             <div class="hero-badge">
-                <i class="fa-solid fa-sun"></i> +244 mil Visualizações Mensais • O Portal Oficial de SC
+                <i class="fa-solid fa-sun"></i> +244 mil Visualizações Mensais
             </div>
             <h1 class="hero-title">
                 Viva o melhor de Santa Catarina <br>
                 <span class="text-gradient">com vantagens exclusivas no WhatsApp.</span>
             </h1>
             <p class="hero-subtitle">
-                Restaurantes à beira-mar, beach clubs, passeios de escuna, parques e pousadas selecionadas com reservas diretas e descontos de até <strong>45% OFF</strong>.
+                Restaurantes à beira-mar, beach clubs, passeios de escuna, parques e pousadas selecionadas com reservas
+                diretas e descontos de até <strong>45% OFF</strong>.
             </p>
 
             <!-- Search Bar -->
             <div class="search-box">
                 <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                <input type="text" id="searchInput" placeholder="Busque por praia, passeio, restaurante (ex: Camarão, Escuna, Floripa)...">
+                <input type="text" id="searchInput"
+                    placeholder="Busque por praia, passeio, restaurante (ex: Camarão, Escuna, Floripa)...">
                 <button class="btn btn-primary btn-search" onclick="filterOffers()">Buscar</button>
             </div>
 
@@ -159,13 +169,17 @@
             <div class="qr-card">
                 <div class="qr-code-wrapper">
                     <div id="qrcodeCanvas"></div>
-                    <img src="logo.png" class="qr-center-logo" style="width: 42px !important; height: 42px !important; max-width: 42px !important; max-height: 42px !important; object-fit: contain;" alt="Santa Temporada">
+                    <img src="logo.png" class="qr-center-logo"
+                        style="width: 42px !important; height: 42px !important; max-width: 42px !important; max-height: 42px !important; object-fit: contain;"
+                        alt="Santa Temporada">
                 </div>
                 <div class="qr-info">
                     <span class="qr-badge"><i class="fa-brands fa-whatsapp"></i> Canal VIP Exclusivo</span>
                     <h2>Receba achados, roteiros e dicas de SC direto no seu WhatsApp!</h2>
-                    <p>Escaneie o QR Code com a câmera do seu celular ou clique no botão abaixo para entrar gratuitamente no nosso Canal Oficial.</p>
-                    <a href="https://whatsapp.com/channel/0029Vb8s3tz6GcGL6bBy2w45" target="_blank" class="btn btn-qr-action">
+                    <p>Escaneie o QR Code com a câmera do seu celular ou clique no botão abaixo para entrar
+                        gratuitamente no nosso Canal Oficial.</p>
+                    <a href="https://whatsapp.com/channel/0029Vb8s3tz6GcGL6bBy2w45" target="_blank"
+                        class="btn btn-qr-action">
                         <i class="fa-brands fa-whatsapp"></i> Entrar no Canal Gratuitamente
                     </a>
                 </div>
@@ -179,7 +193,8 @@
             <div class="b2b-content">
                 <span class="b2b-tag">Para Restaurantes, Passeios e Pousadas em SC</span>
                 <h2>Divulgue sua marca para mais de 244 mil pessoas apaixonadas por Santa Catarina.</h2>
-                <p>Anuncie no Santa Temporada. Coloque seu estabelecimento em destaque nas nossas redes com alcance milionário e receba clientes diretamente no seu canal.</p>
+                <p>Anuncie no Santa Temporada. Coloque seu estabelecimento em destaque nas nossas redes com alcance
+                    milionário e receba clientes diretamente no seu canal.</p>
                 <a href="https://whatsapp.com/channel/0029Vb8s3tz6GcGL6bBy2w45" target="_blank" class="btn btn-b2b">
                     <i class="fa-solid fa-handshake"></i> Divulgar Meu Negócio
                 </a>
@@ -195,9 +210,10 @@
                     <img src="logo.png" alt="Santa Temporada Logo" class="logo-img footer-logo-img">
                     <div><span class="logo-accent">Santa</span>Temporada</div>
                 </a>
-                <p class="footer-text">O seu portal de dicas, experiências e turismo em Santa Catarina. O melhor do litoral ao seu alcance.</p>
+                <p class="footer-text">O seu portal de dicas, experiências e turismo em Santa Catarina. O melhor do
+                    litoral ao seu alcance.</p>
             </div>
-            
+
             <div class="footer-col">
                 <h4>Destinos Principais</h4>
                 <ul>
@@ -220,13 +236,13 @@
 
             <div class="footer-col">
                 <h4>Contato & Anúncios</h4>
-                <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: (48) 99999-9999</p>
+                <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: (51) 99256-8861</p>
                 <p><i class="fa-solid fa-envelope"></i> contato@santatemporada.com.br</p>
                 <p><i class="fa-solid fa-globe"></i> santatemporada.com.br</p>
             </div>
         </div>
         <div class="footer-bottom text-center">
-            <p>&copy; 2026 Santa Temporada. Todos os direitos reservados. Hospedado na Hostinger.</p>
+            <p>&copy; 2026 Santa Temporada. Todos os direitos reservados.</p>
         </div>
     </footer>
 
@@ -234,4 +250,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <script src="app.js"></script>
 </body>
+
 </html>
