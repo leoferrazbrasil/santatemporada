@@ -125,6 +125,8 @@ function initQRCode() {
 }
 
 function initEvents() {
+    initMobileMenu();
+
     // Category pill click handler
     const pills = document.querySelectorAll(".cat-pill");
     pills.forEach(pill => {
@@ -224,4 +226,25 @@ function renderOffers() {
             </div>
         </div>
     `).join("");
+}
+
+function initMobileMenu() {
+    const toggleBtn = document.getElementById("mobileMenuToggle");
+    const navMenu = document.getElementById("navMenu");
+    
+    if (!toggleBtn || !navMenu) return;
+
+    toggleBtn.addEventListener("click", () => {
+        const isOpen = navMenu.classList.toggle("open");
+        toggleBtn.classList.toggle("active", isOpen);
+        toggleBtn.setAttribute("aria-expanded", isOpen);
+    });
+
+    document.addEventListener("click", (e) => {
+        if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target) && navMenu.classList.contains("open")) {
+            navMenu.classList.remove("open");
+            toggleBtn.classList.remove("active");
+            toggleBtn.setAttribute("aria-expanded", "false");
+        }
+    });
 }

@@ -35,22 +35,31 @@
                 <span class="badge-vip">SC VIP</span>
             </a>
             
-            <div class="nav-location">
-                <i class="fa-solid fa-umbrella-beach"></i>
-                <select id="citySelect" class="city-selector">
-                    <option value="all">Todas as Praias / Cidades</option>
-                    <option value="floripa" selected>Florianópolis</option>
-                    <option value="bc">Balneário Camboriú</option>
-                    <option value="garopaba">Garopaba & Rosa</option>
-                    <option value="bombinhas">Bombinhas</option>
-                </select>
-            </div>
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-toggle" id="mobileMenuToggle" aria-label="Abrir Menu de Navegação">
+                <i class="fa-solid fa-bars icon-open"></i>
+                <i class="fa-solid fa-xmark icon-close"></i>
+            </button>
 
-            <div class="nav-actions">
-                <a href="https://whatsapp.com/channel/0029Vb8s3tz6GcGL6bBy2w45" target="_blank" class="btn btn-whatsapp-header">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <span>Canal VIP no WA</span>
-                </a>
+            <!-- Nav Content (Desktop & Mobile Menu) -->
+            <div class="nav-menu" id="navMenu">
+                <div class="nav-location">
+                    <i class="fa-solid fa-umbrella-beach"></i>
+                    <select id="citySelect" class="city-selector" aria-label="Selecionar Cidade ou Praia">
+                        <option value="all">Todas as Praias / Cidades</option>
+                        <option value="floripa" selected>Florianópolis</option>
+                        <option value="bc">Balneário Camboriú</option>
+                        <option value="garopaba">Garopaba & Rosa</option>
+                        <option value="bombinhas">Bombinhas</option>
+                    </select>
+                </div>
+
+                <div class="nav-actions">
+                    <a href="https://whatsapp.com/channel/0029Vb8s3tz6GcGL6bBy2w45" target="_blank" class="btn btn-whatsapp-header">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>Canal VIP no WA</span>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
