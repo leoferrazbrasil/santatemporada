@@ -162,6 +162,30 @@ function sortOffers() {
     renderOffers();
 }
 
+/**
+ * Generates a dynamic tracking WhatsApp Deep Link URL for a specific offer
+ * @param {string} offerId - Unique ID of the offer
+ * @returns {string} Encoded WhatsApp URL with unique voucher hash payload
+ */
+function getOfferVoucherUrl(offerId) {
+    const offer = OFFERS_DATA.find(item => item.id === offerId);
+    if (!offer) return "https://whatsapp.com/channel/0029Vb8s3tz6GcGL6bBy2w45";
+    
+    // Generate a unique 4-digit tracking hash code for the voucher
+    const randomHash = Math.floor(1000 + Math.random() * 9000);
+    const voucherCode = `ST-${offer.id.toUpperCase()}-${randomHash}`;
+    
+    const messageText = `Olá! Quero resgatar meu Voucher VIP do Santa Temporada:
+🎟️ *Código:* ${voucherCode}
+🍽️ *Oferta:* ${offer.title}
+📍 *Local:* ${offer.location}
+💰 *Preço VIP:* R$ ${offer.newPrice.toFixed(2).replace('.', ',')} (-${offer.discountPercent}% OFF)
+
+Como faço para validar minha reserva?`;
+
+    return `https://api.whatsapp.com/send?phone=5548999999999&text=${encodeURIComponent(messageText)}`;
+}
+
 function renderOffers() {
     const grid = document.getElementById("offersGrid");
     
@@ -218,10 +242,10 @@ function renderOffers() {
                     </div>
                 </div>
 
-                <a href="https://whatsapp.com/channel/0029Vb8s3tz6GcGL6bBy2w45" 
+                <a href="${getOfferVoucherUrl(item.id)}" 
                    target="_blank" 
                    class="btn btn-card-resgate">
-                    <i class="fa-brands fa-whatsapp"></i> Ver no Canal do WhatsApp
+                    <i class="fa-brands fa-whatsapp"></i> Resgatar Voucher (-${item.discountPercent}% OFF)
                 </a>
             </div>
         </div>

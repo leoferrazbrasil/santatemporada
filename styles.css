@@ -16,40 +16,40 @@
     --bg-card-hover: #FFFDF9;
     --bg-navbar: rgba(247, 235, 225, 0.94);
     --bg-section-alt: #FAF1E8;
-    
+
     /* Brand Primary: Laranja Pôr do Sol */
     --primary: #F26A36;
     --primary-hover: #D85324;
     --primary-glow: rgba(242, 106, 54, 0.25);
-    
+
     /* Brand Accents: Amarelo Sol, Azul Oceano, Verde Petróleo & Ameixa Escuro */
     --accent-sun: #F9B716;
     --accent-cyan: #1CA3D4;
     --brand-navy: #1D1222;
     --brand-teal: #0B6171;
-    
+
     /* WhatsApp Action */
     --accent-whatsapp: #25D366;
     --accent-whatsapp-hover: #128C7E;
-    
+
     /* Typography Colors */
     --text-main: #1D1222;
     --text-muted: #5C5260;
     --text-light: #8E8592;
     --text-white: #FFFFFF;
-    
+
     /* Borders & Shadows */
     --border-color: rgba(242, 106, 54, 0.15);
     --border-highlight: rgba(242, 106, 54, 0.35);
-    
+
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
-    
+
     --radius-sm: 10px;
     --radius-md: 16px;
     --radius-lg: 24px;
     --radius-full: 9999px;
-    
+
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --shadow-card: 0 12px 35px -10px rgba(29, 18, 34, 0.1);
     --shadow-soft: 0 4px 20px rgba(29, 18, 34, 0.05);
@@ -78,7 +78,10 @@ body {
 }
 
 /* Typography & Utilities */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--font-heading);
     font-weight: 700;
     color: var(--brand-navy);
@@ -96,7 +99,9 @@ a {
     -webkit-text-fill-color: transparent;
 }
 
-.text-center { text-align: center; }
+.text-center {
+    text-align: center;
+}
 
 /* Buttons */
 .btn {
@@ -385,7 +390,9 @@ a {
     scroll-snap-type: x mandatory;
 }
 
-.categories-scroll::-webkit-scrollbar { display: none; }
+.categories-scroll::-webkit-scrollbar {
+    display: none;
+}
 
 .cat-pill {
     scroll-snap-align: start;
@@ -404,8 +411,15 @@ a {
 }
 
 @keyframes bounceRight {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(4px); }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(4px);
+    }
 }
 
 .icon-bounce {
@@ -431,7 +445,8 @@ a {
     box-shadow: var(--shadow-soft);
 }
 
-.cat-pill:hover, .cat-pill.active {
+.cat-pill:hover,
+.cat-pill.active {
     background: linear-gradient(135deg, var(--primary) 0%, var(--accent-sun) 100%);
     color: white;
     border-color: var(--primary);
@@ -851,9 +866,17 @@ a {
     transition: var(--transition);
 }
 
-.mobile-toggle .icon-close { display: none; }
-.mobile-toggle.active .icon-open { display: none; }
-.mobile-toggle.active .icon-close { display: block; }
+.mobile-toggle .icon-close {
+    display: none;
+}
+
+.mobile-toggle.active .icon-open {
+    display: none;
+}
+
+.mobile-toggle.active .icon-close {
+    display: block;
+}
 
 /* Responsive Breakpoints & Fluid Layout (1920px -> 320px) */
 
@@ -861,7 +884,7 @@ a {
     .container {
         padding: 0 24px;
     }
-    
+
     .hero-section {
         padding: 48px 0 32px;
     }
@@ -971,7 +994,7 @@ a {
     }
 
     .b2b-banner {
-        padding: 24px 0 40px;
+        padding: 20px 20px 20px 20px;
     }
 
     .b2b-container {
@@ -1116,6 +1139,7 @@ a {
         opacity: 0;
         transform: translateY(-8px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
