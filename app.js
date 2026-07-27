@@ -183,7 +183,7 @@ function getOfferVoucherUrl(offerId) {
 
 Como faço para validar minha reserva?`;
 
-    return `https://api.whatsapp.com/send?phone=5548999999999&text=${encodeURIComponent(messageText)}`;
+    return `https://api.whatsapp.com/send?phone=5551996737359&text=${encodeURIComponent(messageText)}`;
 }
 
 function renderOffers() {
