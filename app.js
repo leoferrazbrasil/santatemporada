@@ -106,7 +106,23 @@ let currentSort = "popular";
 document.addEventListener("DOMContentLoaded", () => {
     initEvents();
     renderOffers();
+    initQRCode();
 });
+
+function initQRCode() {
+    const qrContainer = document.getElementById("qrcodeCanvas");
+    if (qrContainer && typeof QRCode !== "undefined") {
+        qrContainer.innerHTML = "";
+        new QRCode(qrContainer, {
+            text: "https://whatsapp.com/channel/0029Vb8s3tz6GcGL6bBy2w45",
+            width: 150,
+            height: 150,
+            colorDark: "#1D1222",
+            colorLight: "#FFFFFF",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+    }
+}
 
 function initEvents() {
     // Category pill click handler
@@ -200,10 +216,10 @@ function renderOffers() {
                     </div>
                 </div>
 
-                <a href="https://wa.me/5548999999999?text=${encodeURIComponent(item.whatsappText)}" 
+                <a href="https://whatsapp.com/channel/0029Vb8s3tz6GcGL6bBy2w45" 
                    target="_blank" 
                    class="btn btn-card-resgate">
-                    <i class="fa-brands fa-whatsapp"></i> Resgatar no WhatsApp
+                    <i class="fa-brands fa-whatsapp"></i> Ver no Canal do WhatsApp
                 </a>
             </div>
         </div>
