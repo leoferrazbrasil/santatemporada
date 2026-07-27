@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Temporada | Dicas, Experiências, Passeios e Pousadas em Santa Catarina</title>
+    <meta name="description" content="Descubra o melhor de Santa Catarina: restaurantes praianos, passeios turísticos e pousadas em Balneário Camboriú, Florianópolis, Garopaba e Bombinhas com resgate exclusivo via WhatsApp.">
+    <meta name="keywords" content="Santa Temporada, turismo Santa Catarina, ofertas Florianopolis, passeios Balneario Camboriu, pousadas Garopaba, restaurantes Floripa">
+    
+    <!-- Open Graph / Meta Social -->
+    <meta property="og:title" content="Santa Temporada | Clube de Experiências em Santa Catarina">
+    <meta property="og:description" content="Acesse experiências exclusivas, passeios e gastronomia em SC sem intermediários. Resgate direto pelo WhatsApp!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.santatemporada.com.br">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand-logo">
+                <img src="logo.png" alt="Santa Temporada Logo" class="logo-img">
+                <div><span class="logo-accent">Santa</span>Temporada</div>
+                <span class="badge-vip">SC VIP</span>
+            </a>
+            
+            <div class="nav-location">
+                <i class="fa-solid fa-umbrella-beach"></i>
+                <select id="citySelect" class="city-selector">
+                    <option value="all">Todas as Praias / Cidades</option>
+                    <option value="floripa" selected>Florianópolis</option>
+                    <option value="bc">Balneário Camboriú</option>
+                    <option value="garopaba">Garopaba & Rosa</option>
+                    <option value="bombinhas">Bombinhas</option>
+                </select>
+            </div>
+
+            <div class="nav-actions">
+                <a href="https://wa.me/5548999999999?text=Quero%20entrar%20no%20Clube%20VIP%20Santa%20Temporada" target="_blank" class="btn btn-whatsapp-header">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Clube VIP SC</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-badge">
+                <i class="fa-solid fa-sun"></i> +244 mil Visualizações Mensais • O Portal Oficial de SC
+            </div>
+            <h1 class="hero-title">
+                Viva o melhor de Santa Catarina <br>
+                <span class="text-gradient">com vantagens exclusivas no WhatsApp.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Restaurantes à beira-mar, beach clubs, passeios de escuna, parques e pousadas selecionadas com reservas diretas e descontos de até <strong>45% OFF</strong>.
+            </p>
+
+            <!-- Search Bar -->
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Busque por praia, passeio, restaurante (ex: Camarão, Escuna, Floripa)...">
+                <button class="btn btn-primary btn-search" onclick="filterOffers()">Buscar</button>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-num">244K+</span>
+                    <span class="stat-label">Alcance Orgânico / Mês</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">100%</span>
+                    <span class="stat-label">Reserva sem Taxa de Agência</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-num">⭐ 4.9</span>
+                    <span class="stat-label">Avaliação dos Turistas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filter Bar -->
+    <section class="categories-section">
+        <div class="container">
+            <div class="categories-scroll" id="categoryBar">
+                <button class="cat-pill active" data-cat="all">
+                    <i class="fa-solid fa-border-all"></i> Todas as Experiências
+                </button>
+                <button class="cat-pill" data-cat="gastronomia">
+                    <i class="fa-solid fa-utensils"></i> Frutos do Mar & Gastronomia
+                </button>
+                <button class="cat-pill" data-cat="passeios">
+                    <i class="fa-solid fa-ship"></i> Passeios & Aventuras
+                </button>
+                <button class="cat-pill" data-cat="pousadas">
+                    <i class="fa-solid fa-bed"></i> Pousadas & Suítes
+                </button>
+                <button class="cat-pill" data-cat="beachclubs">
+                    <i class="fa-solid fa-martini-glass-citrus"></i> Beach Clubs & Bares
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers Grid Section -->
+    <section class="offers-section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Experiências & Ofertas em SC</h2>
+                    <p class="section-desc">Curadoria das melhores atrações e opções gastronômicas do litoral</p>
+                </div>
+                <div class="sort-wrapper">
+                    <label for="sortSelect">Ordenar por:</label>
+                    <select id="sortSelect" onchange="sortOffers()">
+                        <option value="popular">Mais Desejados</option>
+                        <option value="discount">Maior Economia</option>
+                        <option value="price-low">Menor Preço</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Offers Container (Dynamic Render via JS) -->
+            <div class="offers-grid" id="offersGrid">
+                <!-- JS will render offer cards here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- B2B Merchant Banner Section -->
+    <section class="b2b-banner">
+        <div class="container b2b-container">
+            <div class="b2b-content">
+                <span class="b2b-tag">Para Restaurantes, Passeios e Pousadas em SC</span>
+                <h2>Divulgue sua marca para mais de 244 mil pessoas apaixonadas por Santa Catarina.</h2>
+                <p>Anuncie no Santa Temporada. Coloque seu estabelecimento em destaque nas nossas redes com alcance milionário e receba clientes e reservas diretamente no seu WhatsApp.</p>
+                <a href="https://wa.me/5548999999999?text=Quero%20divulgar%20meu%20estabelecimento%20no%20Santa%20Temporada" target="_blank" class="btn btn-b2b">
+                    <i class="fa-solid fa-handshake"></i> Divulgar Meu Negócio
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="#" class="brand-logo footer-logo">
+                    <img src="logo.png" alt="Santa Temporada Logo" class="logo-img footer-logo-img">
+                    <div><span class="logo-accent">Santa</span>Temporada</div>
+                </a>
+                <p class="footer-text">O seu portal de dicas, experiências e turismo em Santa Catarina. O melhor do litoral ao seu alcance.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Destinos Principais</h4>
+                <ul>
+                    <li><a href="#">Florianópolis</a></li>
+                    <li><a href="#">Balneário Camboriú</a></li>
+                    <li><a href="#">Garopaba & Praia do Rosa</a></li>
+                    <li><a href="#">Bombinhas & Porto Belo</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Categorias</h4>
+                <ul>
+                    <li><a href="#">Sequências de Camarão</a></li>
+                    <li><a href="#">Passeios de Escuna & Lancha</a></li>
+                    <li><a href="#">Pousadas Pé na Areia</a></li>
+                    <li><a href="#">Parques Temáticos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contato & Anúncios</h4>
+                <p><i class="fa-brands fa-whatsapp"></i> WhatsApp: (48) 99999-9999</p>
+                <p><i class="fa-solid fa-envelope"></i> contato@santatemporada.com.br</p>
+                <p><i class="fa-solid fa-globe"></i> santatemporada.com.br</p>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 Santa Temporada. Todos os direitos reservados. Hospedado na Hostinger.</p>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="app.js"></script>
+</body>
+</html>
