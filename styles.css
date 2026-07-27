@@ -331,14 +331,17 @@ a {
 /* Categories Section */
 .categories-section {
     padding: 20px 0 30px;
+    overflow: hidden;
 }
 
 .categories-scroll {
     display: flex;
     gap: 12px;
     overflow-x: auto;
-    padding-bottom: 8px;
+    padding: 6px 20px 14px 20px;
+    margin: 0 -20px;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
 }
 
 .categories-scroll::-webkit-scrollbar { display: none; }
@@ -798,8 +801,21 @@ a {
 }
 
 @media (max-width: 768px) {
+    .brand-logo .badge-vip {
+        display: none;
+    }
+
+    .brand-logo {
+        font-size: 1.3rem;
+    }
+
+    .logo-img {
+        height: 38px;
+    }
+
     .mobile-toggle {
         display: flex;
+        margin-left: auto;
     }
 
     .nav-menu {
@@ -810,16 +826,19 @@ a {
         top: 100%;
         left: 0;
         right: 0;
+        width: 100%;
         background: var(--bg-navbar);
-        backdrop-filter: blur(16px);
-        border-bottom: 1px solid var(--border-color);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 2px solid var(--border-color);
         padding: 20px 24px;
-        box-shadow: 0 15px 35px rgba(29, 18, 34, 0.12);
+        box-shadow: 0 15px 35px rgba(29, 18, 34, 0.15);
         gap: 16px;
+        z-index: 999;
     }
 
     .nav-menu.open {
-        display: flex;
+        display: flex !important;
         animation: fadeInDown 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -853,12 +872,7 @@ a {
     .section-header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 16px;
-    }
-
-    .sort-wrapper {
-        width: 100%;
-        justify-content: space-between;
+        gap: 12px;
     }
 
     .b2b-container {
@@ -873,6 +887,25 @@ a {
 }
 
 @media (max-width: 576px) {
+    .sort-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #FFFFFF;
+        padding: 10px 16px;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border-color);
+        margin-top: 6px;
+    }
+
+    .sort-wrapper select {
+        flex: 1;
+        text-align: right;
+        border: none;
+        background: transparent;
+    }
+
     .search-box {
         flex-direction: column;
         border-radius: var(--radius-lg);
@@ -912,11 +945,11 @@ a {
     }
 
     .brand-logo {
-        font-size: 1.35rem;
+        font-size: 1.18rem;
     }
 
     .logo-img {
-        height: 38px;
+        height: 34px;
     }
 
     .cat-pill {
